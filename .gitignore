@@ -1,0 +1,9 @@
+# Reportes de auditoría — pueden contener PII del cliente auditado
+auditoria_*.md
+auditoria_*.docx
+
+# Entornos y cache
+.env
+__pycache__/
+*.pyc
+.DS_Store
