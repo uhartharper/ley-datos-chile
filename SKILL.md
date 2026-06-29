@@ -10,7 +10,7 @@ argument-hint: "<url> [--docx]"
 license: MIT
 metadata:
   author: PubliUp SEO
-  version: "1.0.0"
+  version: "1.1.0"
   category: legal-compliance
 ---
 
@@ -28,6 +28,25 @@ ejecutivo con accionables en formato Word.
 
 Si el usuario no especifica formato, preguntar siempre antes de generar
 el documento: "¿El informe es para uso interno o para entregar al cliente?"
+
+---
+
+## Nota de terminología
+
+Dos figuras distintas con nombres similares — no confundir:
+
+- **Encargado del tratamiento** (data processor): empresa o persona que trata datos
+  por cuenta del responsable (proveedor de email marketing, CRM, hosting). Regulado
+  en Art. 24. No visible externamente — queda fuera del scope de esta auditoría.
+- **Encargado de Protección de Datos / EPD** (Data Protection Officer): figura de
+  supervisión interna del responsable. Regulado en Art. 36. Auditado en Bloque 10.
+
+## Nota sobre la autoridad de control
+
+La Ley 21.719 crea la **Agencia de Protección de Datos Personales (APDP)** como
+autoridad de control. Durante el período de transición hasta que la APDP esté
+operativa (estimado 2026–2027), el **Consejo para la Transparencia (CPLT)** asume
+sus funciones. En el informe citar siempre: "APDP (y transitoriamente CPLT)".
 
 ---
 
@@ -84,10 +103,12 @@ Peso: 10 pts
 Verificar que en la política de privacidad aparezca:
 - [ ] Nombre o razón social del responsable
 - [ ] RUT o identificación legal
-- [ ] Domicilio en Chile (o representante en Chile si es entidad extranjera)
-- [ ] Dirección de correo o medio de contacto
+- [ ] Domicilio en Chile (o representante legal designado en Chile si es entidad extranjera sin domicilio en el país)
+- [ ] Dirección de correo o medio de contacto directo
 
 Parcial si aparece el nombre pero faltan RUT o domicilio.
+Si la entidad es extranjera sin domicilio en Chile, verificar que la política
+designe explícitamente un representante en Chile — su ausencia es issue crítico.
 
 ### Bloque 2 — Política de privacidad: existencia y acceso (Art. 14)
 Peso: 5 pts
@@ -103,73 +124,138 @@ Peso: 15 pts
 
 Verificar que la política incluya explícitamente:
 - [ ] **a)** Finalidad(es) del tratamiento — para qué se usan los datos
-- [ ] **b)** Base legal de cada finalidad (consentimiento / interés legítimo / contrato / obligación legal)
+- [ ] **b)** Base legal de cada finalidad (ver Bloque 4 para las 6 bases válidas)
 - [ ] **c)** Tipos de datos que se recogen
 - [ ] **d)** Destinatarios o categorías de destinatarios (terceros, proveedores, filiales)
 - [ ] **e)** Plazos de conservación o criterios para determinarlos
-- [ ] **f)** Derechos del titular: acceso, rectificación, cancelación, oposición, portabilidad, limitación
+- [ ] **f)** Derechos del titular: acceso, rectificación, cancelación, oposición, portabilidad,
+     limitación y derecho a no ser objeto de decisiones basadas exclusivamente en
+     tratamiento automatizado
 - [ ] **g)** Procedimiento para ejercer derechos y plazo de respuesta (15 días hábiles)
-- [ ] **h)** Transferencias internacionales (si aplica) y garantías
+- [ ] **h)** Transferencias internacionales (si aplica) y garantías adoptadas
 - [ ] **i)** Uso de cookies y tecnologías de rastreo
-- [ ] **j)** Contacto del Encargado de Protección de Datos (si aplica)
-- [ ] **k)** Derecho a reclamar ante el CPLT (Consejo para la Transparencia)
+- [ ] **j)** Contacto del Encargado de Protección de Datos / EPD (si aplica)
+- [ ] **k)** Derecho a reclamar ante la APDP (y transitoriamente ante el CPLT)
+
+Adicionalmente, la ley exige que los elementos esenciales (categorías de datos,
+finalidades, derechos del titular) sean **visibles de forma destacada** en el sitio
+(no solo en un documento largo). Verificar que exista al menos un resumen accesible
+o que la política sea de lectura razonablemente directa.
 
 Puntuación parcial: 1 pt por ítem presente, máx. 15.
 
 ### Bloque 4 — Base legal del tratamiento declarada (Art. 12)
 Peso: 10 pts
 
-- [ ] Se indica explícitamente la base legal de cada finalidad
-- [ ] No se usa "consentimiento" como única base cuando el tratamiento es necesario para el contrato
-- [ ] El consentimiento declarado es previo, informado, libre, específico y unívoco
-- [ ] No se usan casillas pre-marcadas como mecanismo de consentimiento
-- [ ] Se distingue entre finalidades obligatorias y opcionales
+La Ley 21.719 reconoce seis bases legales válidas. Verificar que la política:
+- [ ] Declare la base legal de cada finalidad de tratamiento
+- [ ] Use las bases correctas — las seis válidas son:
+  1. Consentimiento del titular
+  2. Cumplimiento de obligación legal del responsable
+  3. Ejecución de un contrato en que el titular es parte (o medidas precontractuales)
+  4. Interés legítimo del responsable o de un tercero
+  5. Obligaciones económicas, financieras, bancarias o comerciales (base específica de la ley chilena)
+  6. Establecimiento, ejercicio o defensa de pretensiones legales
+- [ ] No use "consentimiento" como base cuando el tratamiento es necesario para el contrato
+- [ ] Los formularios de captación no usen casillas pre-marcadas
+- [ ] Se distinga entre finalidades obligatorias y opcionales
 
-### Bloque 5 — Consentimiento y cookies (Art. 12 + 17)
+**Privacidad por diseño (verificación externa):**
+- [ ] Los formularios solicitan solo los datos estrictamente necesarios para la finalidad declarada
+- [ ] Las opciones de suscripción a comunicaciones comerciales no están pre-seleccionadas
+
+### Bloque 5 — Consentimiento, cookies y marketing directo (Art. 12)
 Peso: 15 pts
+
+⚠️ Nota: La Ley 21.719 no contiene un artículo específico de cookies — los requisitos
+derivan de las reglas generales de consentimiento (Art. 12) y de la guía SERNAC.
+Los ítems de granularidad y rechazo equivalente son mejores prácticas del estándar
+internacional, no obligaciones expresas de la ley chilena. Se incluyen como buenas
+prácticas recomendadas; marcarlos como "Parcial" si no se cumplen, no como "No cumple".
 
 **Banner de cookies:**
 - [ ] Existe banner o mecanismo de consentimiento de cookies
-- [ ] El banner permite aceptar o rechazar antes de que se carguen cookies no esenciales
+- [ ] El banner bloquea cookies no esenciales hasta obtener consentimiento activo
 - [ ] No hay cookies de análisis, publicidad o rastreo activas antes del consentimiento
-- [ ] Existe opción de configuración granular (analítica / marketing / funcional)
-- [ ] El rechazo es tan sencillo como la aceptación (mismo nivel de acceso)
+- [ ] *(Buena práctica)* Existe opción de configuración granular (analítica / marketing / funcional)
+- [ ] *(Buena práctica)* El rechazo es tan accesible como la aceptación
 
 **Formularios:**
 - [ ] Los formularios con tratamiento de datos incluyen checkbox de consentimiento no pre-marcado
 - [ ] El checkbox vincula a la política de privacidad
 - [ ] Se indica la finalidad concreta del formulario antes de enviar
 
-Verificar que no haya cookies de terceros activas antes del consentimiento inspeccionando
-el código fuente del homepage. Si el banner no existe o es solo informativo (sin botón de rechazo),
-reportar como No cumple.
+**Marketing directo:**
+La ley otorga al titular el derecho de oposición específico al marketing directo.
+El responsable debe cesar ese tratamiento al recibir la oposición. Verificar:
+- [ ] Si el sitio tiene newsletter o comunicaciones comerciales: ¿existe un mecanismo
+     de baja/opt-out claro (enlace en email, formulario, o dirección de contacto)?
+- [ ] ¿La política menciona el derecho de oposición al marketing directo?
+- [ ] Si hay formulario de suscripción a comunicaciones: ¿el checkbox de marketing
+     es independiente del consentimiento para el servicio principal?
 
-### Bloque 6 — Derechos ARCOP+L: canal habilitado (Art. 4–11)
+Verificar cookies de terceros activas antes del consentimiento inspeccionando el
+código fuente del homepage. Si el banner no existe o es solo informativo, reportar
+el ítem de bloqueo como No cumple.
+
+### Bloque 6 — Derechos del titular: canal habilitado
 Peso: 15 pts
 
-Los derechos bajo Ley 21.719 son: Acceso, Rectificación, Cancelación/Supresión,
-Oposición, Portabilidad y Limitación del tratamiento.
+⚠️ Nota: La numeración exacta de los artículos de derechos del titular en el texto
+oficial publicado no ha podido confirmarse directamente en esta versión del skill
+(la BCN no siempre es accesible). Las referencias de artículo para este bloque se
+omiten hasta verificación y se cita solo la ley en general. No afecta al contenido
+de los checklists.
 
+La Ley 21.719 reconoce **siete derechos del titular**:
+1. Acceso
+2. Rectificación
+3. Cancelación / Supresión
+4. Oposición
+5. Portabilidad
+6. Limitación del tratamiento
+7. No ser objeto de decisiones basadas exclusivamente en tratamiento automatizado
+
+Verificar:
 - [ ] Existe un mecanismo explícito para ejercer derechos (email, formulario, dirección postal)
-- [ ] Se menciona el plazo de respuesta (15 días hábiles desde Art. 11)
-- [ ] Se mencionan los seis derechos, incluidos Portabilidad y Limitación (nuevos en Ley 21.719)
+- [ ] Se menciona el plazo de respuesta (15 días hábiles)
+- [ ] Se mencionan los **siete** derechos, incluidos Portabilidad, Limitación y el
+     derecho frente a decisiones automatizadas
 - [ ] Se indica qué información debe adjuntar el titular al hacer la solicitud
-- [ ] Se menciona el derecho a reclamar ante el CPLT si la solicitud no es atendida
+- [ ] Se menciona el derecho a reclamar ante la APDP (y transitoriamente el CPLT)
+     si la solicitud no es atendida o es rechazada
+
+**Decisiones automatizadas — verificación adicional:**
+Si el sitio usa scoring, recomendaciones algorítmicas, aprobación automática de
+créditos o cualquier sistema de decisión automatizado con efectos sobre el titular:
+- [ ] ¿La política menciona este tipo de tratamiento?
+- [ ] ¿Existe canal para solicitar revisión humana de la decisión?
 
 ### Bloque 7 — Datos sensibles (Art. 2 + 16)
 Peso: 10 pts
 
-Primero determinar si el sitio recoge datos sensibles. Señales:
-formularios de salud, datos étnicos, orientación sexual, biometría, afiliación política
-o sindical, creencias religiosas, datos de menores.
+Primero determinar si el sitio recoge datos sensibles. La Ley 21.719 define como
+datos sensibles (lista exhaustiva):
+- Origen racial o étnico
+- Situación socioeconómica
+- Convicciones ideológicas o filosóficas
+- Creencias religiosas
+- Afiliación política o sindical
+- Afiliaciones profesionales o gremiales
+- Datos de salud, estado físico o psíquico
+- Vida sexual y orientación sexual
+- Datos biométricos destinados a la identificación unívoca
+- Datos de menores de edad (⚠️ verificar en texto oficial el umbral exacto de edad;
+  la skill usa 14 años por analogía con la legislación civil chilena, pero el
+  reglamento de la ley puede especificar un umbral distinto)
 
-**Si el sitio no recoge datos sensibles:** bloque N/A, asignar 10 pts automáticamente.
+**Si el sitio no recoge ninguna de estas categorías:** bloque N/A, asignar 10 pts automáticamente.
 
 **Si recoge datos sensibles:**
 - [ ] Se identifican explícitamente como datos sensibles en la política
 - [ ] Se solicita consentimiento explícito y diferenciado (no agrupado con otros datos)
 - [ ] Se indica finalidad específica para esos datos
-- [ ] Se implementan medidas de seguridad reforzadas (mencionadas en la política)
+- [ ] Se mencionan medidas de seguridad reforzadas en la política
 
 **Requisitos adicionales por sector:**
 
@@ -179,9 +265,10 @@ o sindical, creencias religiosas, datos de menores.
 - [ ] Si hay ficha clínica electrónica, se indica el marco legal aplicable (Ley 20.584 superpuesta)
 
 *Educación (menores):*
-- [ ] Datos de menores de 14 años requieren consentimiento del padre/madre/tutor
+- [ ] Datos de menores requieren consentimiento del padre/madre/tutor (verificar umbral
+     exacto cuando se publique el reglamento)
 - [ ] Se identifica explícitamente si el servicio está dirigido a menores
-- [ ] No se usa la dirección como dato requerido para menores
+- [ ] No se solicita domicilio ni teléfono como datos requeridos para menores
 
 *Ecommerce:*
 - [ ] Datos de pago no se almacenan localmente si se usa pasarela de terceros (indicarlo)
@@ -189,7 +276,8 @@ o sindical, creencias religiosas, datos de menores.
 
 *Fintech/financiero:*
 - [ ] Se menciona la regulación CMF superpuesta si aplica
-- [ ] Datos financieros tratados como categoría especial con garantías adicionales
+- [ ] Datos financieros tratados con garantías adicionales (base legal 5 — obligaciones
+     económico-financieras — o consentimiento explícito)
 
 ### Bloque 8 — Transferencias internacionales (Art. 26)
 Peso: 10 pts
@@ -199,18 +287,26 @@ herramientas de análisis, servicios en la nube con sede fuera de Chile.
 
 - [ ] La política declara si se realizan transferencias internacionales
 - [ ] Se identifican los países o regiones de destino
-- [ ] Se indican las garantías adoptadas: contrato de encargo con cláusulas estándar,
-     país con nivel de protección adecuado reconocido, o consentimiento explícito del titular
+- [ ] Se indica la garantía adoptada. Las garantías válidas bajo Ley 21.719 son:
+  - País con nivel de protección adecuado reconocido por la APDP
+  - Contrato con cláusulas estándar de protección de datos
+  - Normas corporativas vinculantes / Binding Corporate Rules (BCR)
+  - Mecanismo de certificación reconocido por la APDP
+  - Consentimiento explícito del titular para la transferencia concreta
 - [ ] Si no se realizan transferencias internacionales, se indica explícitamente
 
 ### Bloque 9 — Seguridad técnica (Art. 19)
 Peso: 5 pts
 
+La ley exige medidas que garanticen **confidencialidad, integridad, disponibilidad
+y resiliencia** del tratamiento. Verificar lo observable externamente:
+
 - [ ] HTTPS activo en todas las páginas (sin mixed content)
 - [ ] Certificado SSL válido y no expirado
 - [ ] HSTS habilitado (Strict-Transport-Security en headers)
 - [ ] No hay redirección de HTTP a HTTPS rota
-- [ ] La política menciona las medidas de seguridad implementadas (aunque sea de forma general)
+- [ ] La política menciona las medidas de seguridad y, preferiblemente, los cuatro
+     atributos: confidencialidad, integridad, disponibilidad y resiliencia
 
 **Sector salud / fintech:** verificar también:
 - [ ] CSP (Content-Security-Policy) configurado
@@ -219,17 +315,24 @@ Peso: 5 pts
 ### Bloque 10 — Encargado de Protección de Datos / EPD (Art. 36)
 Peso: 5 pts
 
-El EPD es obligatorio para: organismos públicos, responsables que traten datos
-a gran escala, tratamientos de categorías especiales a gran escala, y monitoreo
-sistemático de personas.
+⚠️ Nota: Los criterios de obligatoriedad del EPD en la Ley 21.719 son distintos
+de los del RGPD Art. 37. Bajo la ley chilena, el EPD es una figura obligatoria
+principalmente en el contexto de los **modelos de cumplimiento certificados** y
+para ciertos organismos públicos. Para empresas privadas fuera de ese contexto,
+la obligatoriedad específica depende del reglamento aún en elaboración.
 
-- [ ] La política indica si aplica o no un EPD al responsable
-- [ ] Si aplica: nombre o rol del EPD publicado
-- [ ] Si aplica: dirección de contacto del EPD publicada
-- [ ] Si no aplica: se indica el motivo o simplemente que no se requiere
+Verificar:
+- [ ] La política indica si existe o no un EPD designado
+- [ ] Si existe: nombre o rol del EPD publicado
+- [ ] Si existe: dirección de contacto del EPD publicada
+- [ ] Si no existe: se indica que no aplica (o que el responsable evalúa su designación)
 
-Si el sitio es pequeño o PYME sin tratamiento masivo ni datos sensibles,
-indicar "No aplica EPD — PYME sin tratamiento de datos a gran escala" y asignar pts completos.
+Si el sitio menciona estar acogido a un modelo de cumplimiento certificado:
+- [ ] Indica el organismo certificador
+- [ ] Menciona el alcance y vigencia de la certificación
+
+Para PYME sin tratamiento masivo ni datos sensibles: registrar como "No aplica EPD —
+organización fuera del ámbito de obligatoriedad actual" y asignar pts completos.
 
 ---
 
@@ -251,26 +354,43 @@ Los bloques N/A (datos sensibles cuando no aplica) suman pts completos.
 
 ---
 
-## Paso 5 — Clasificación de issues
+## Paso 5 — Clasificación de issues y sanciones asociadas
 
-**Crítico** (bloquea cumplimiento mínimo):
-- Política de privacidad inexistente
-- Sin mecanismo de ejercicio de derechos
-- Cookies no esenciales activas sin consentimiento
-- Datos sensibles sin consentimiento explícito diferenciado
-- Sin HTTPS
+La Ley 21.719 establece tres niveles de infracción. Incluir el riesgo de sanción
+en cada issue del informe para contextualizar el impacto económico real.
 
-**Medio** (gap relevante, plazo recomendado de corrección: 30–60 días):
-- Política existe pero falta base legal declarada
-- Derechos mencionados pero sin canal ni plazo de respuesta
-- Transferencias internacionales no declaradas
-- Banner de cookies sin opción de rechazo equivalente al aceptar
+| Nivel | Multa máxima | Ejemplos de conductas |
+|-------|-------------|----------------------|
+| Gravísima | 20.000 UTM (~USD 1.590.000) o 2–4% ingresos anuales | Tratar datos sensibles sin consentimiento; transferir datos internacionalmente sin garantías; vulnerar datos sin notificar |
+| Grave | 10.000 UTM (~USD 795.000) | No atender derechos del titular; falta de política de privacidad; no tener base legal declarada |
+| Leve | 5.000 UTM (~USD 397.500) | Política incompleta; falta de enlace en footer; plazos de retención no especificados |
 
-**Bajo** (mejora de postura, no urgente):
+Reincidencia: hasta 3× la multa original.
+UTM = Unidad Tributaria Mensual (valor mensual actualizado).
+
+**Crítico** (bloquea cumplimiento mínimo — riesgo gravísimo o grave):
+- Política de privacidad inexistente → riesgo grave
+- Sin mecanismo de ejercicio de derechos → riesgo grave
+- Cookies no esenciales activas sin consentimiento → riesgo grave
+- Datos sensibles tratados sin consentimiento explícito diferenciado → riesgo gravísimo
+- Sin HTTPS → riesgo grave (falla en integridad y confidencialidad)
+- Sin base legal declarada para ninguna finalidad → riesgo grave
+- Entidad extranjera sin representante en Chile designado → riesgo grave
+
+**Medio** (gap relevante — riesgo grave o leve, plazo recomendado 30–60 días):
+- Política existe pero falta base legal por finalidad → riesgo grave
+- Derechos mencionados pero sin canal ni plazo de respuesta → riesgo grave
+- Derecho a no ser objeto de decisiones automatizadas no mencionado → riesgo grave
+- Transferencias internacionales no declaradas → riesgo gravísimo si se realizan
+- Banner de cookies solo informativo (sin rechazo activo) → riesgo grave
+- Marketing directo sin mecanismo de baja → riesgo grave
+
+**Bajo** (mejora de postura — riesgo leve):
 - Falta fecha de actualización en la política
 - EPD no mencionado en sitios donde no aplica
 - Política sin enlace desde formularios secundarios
 - Plazos de retención no especificados para algún tipo de dato
+- Política no menciona los cuatro atributos de seguridad
 
 ---
 
@@ -283,7 +403,7 @@ Los bloques N/A (datos sensibles cuando no aplica) suman pts completos.
 Fecha: [fecha]  |  Sector: [sector detectado]  |  Score: [X/100]
 
 ## Resumen
-[2–3 líneas: postura general, issues críticos detectados]
+[2–3 líneas: postura general, issues críticos detectados, riesgo sancionador]
 
 ## Tabla de cumplimiento
 | Bloque | Peso | Pts obtenidos | Estado | Evidencia |
@@ -293,25 +413,29 @@ Fecha: [fecha]  |  Sector: [sector detectado]  |  Score: [X/100]
 
 ## Issues críticos
 
-**[Nombre del issue]** (Bloque X — Art. Y)
+**[Nombre del issue]** (Bloque X — Ley 21.719)
 Evidencia: [qué se encontró o qué falta]
+Riesgo sancionador: [Infracción grave/gravísima — hasta X UTM]
 → Acción: [qué hay que hacer concretamente]
 
 ## Issues medios
 
-**[Nombre del issue]** (Bloque X — Art. Y)
+**[Nombre del issue]** (Bloque X — Ley 21.719)
 Evidencia: [qué se encontró o qué falta]
+Riesgo sancionador: [nivel y multa estimada]
 → Acción: [qué hay que hacer]
 → Plazo sugerido: [30 / 60 días]
 
 ## Issues bajos
 
-**[Nombre del issue]** (Bloque X — Art. Y)
+**[Nombre del issue]** (Bloque X — Ley 21.719)
 → Acción: [qué hay que hacer]
 
 ## Notas metodológicas
 - Qué se verificó externamente
 - Qué requiere acceso al backend para confirmar
+- Advertencia: reglamento de la ley en elaboración — algunos requisitos pueden
+  refinarse cuando se publique (estimado 2026–2027)
 ```
 
 Guardar en `C:/Users/cmano/claude-seo/[cliente o dominio]/auditoria_ley21719_[fecha].md`.
@@ -322,13 +446,14 @@ Preguntar primero: "¿Quieres el informe en lenguaje técnico o ejecutivo simpli
 
 Estructura del .docx:
 1. Portada: dominio, fecha, score global, sector
-2. Resumen ejecutivo (máx. 1 página, sin jerga legal)
+2. Resumen ejecutivo (máx. 1 página, sin jerga legal, incluir riesgo sancionador total estimado)
 3. Tabla de cumplimiento con semáforo visual (Cumple / Parcial / No cumple)
-4. Issues críticos con acción concreta requerida y artículo infringido
-5. Issues medios con recomendación y plazo sugerido
+4. Issues críticos con acción concreta, artículo / obligación infringida y riesgo de multa
+5. Issues medios con recomendación, plazo sugerido y riesgo de multa
 6. Issues bajos como listado
 7. Próximos pasos priorizados (top 5)
-8. Nota metodológica: qué se auditó externamente y qué está fuera de scope
+8. Nota metodológica: qué se auditó externamente, qué está fuera de scope y
+   advertencia sobre el reglamento en elaboración
 
 Guardar en `C:/Users/cmano/claude-seo/[cliente o dominio]/auditoria_ley21719_[fecha].docx`.
 
@@ -373,7 +498,7 @@ El score de cumplimiento Ley 21.719 se integra en el reporte unificado del audit
 /anonimizar C:/Users/cmano/claude-seo/[cliente]/auditoria_ley21719_[fecha].docx --ley chile
 ```
 
-Usar `--ley chile` (no `--ley todo`) para evitar falsos positivos en números de artículos legales.
+Usar `--ley chile` (no `--ley todo`) para evitar falsos positivos en números de artículos.
 
 ### Notas sobre skills de terceros
 
@@ -393,11 +518,12 @@ Esta auditoría cubre lo verificable externamente sin acceso al backend:
 - Headers HTTP
 
 Quedan fuera de scope sin acceso interno:
-- Contratos con encargados del tratamiento (Art. 24)
-- Registros de actividades de tratamiento (Art. 15)
+- Contratos con encargados del tratamiento (data processors) — Art. 24
+- Registros de actividades de tratamiento — Art. 15
 - Procedimientos internos de respuesta a solicitudes de derechos
 - Medidas de seguridad técnicas internas (cifrado en reposo, control de accesos)
-- Notificaciones de brechas al CPLT (Art. 42)
+- Notificaciones de brechas a la APDP (y transitoriamente al CPLT)
+- Modelos de cumplimiento certificados y su contenido interno
 
 Siempre indicar este alcance en la sección de notas metodológicas del informe.
 
@@ -405,8 +531,11 @@ Siempre indicar este alcance en la sección de notas metodológicas del informe.
 
 ## Actualización normativa
 
-Ley 21.719 publicada el 13 de diciembre de 2024. Período de adecuación de 24 meses
-para la mayoría de obligaciones (plazo límite: diciembre 2026). Reglamento aún en
-elaboración a la fecha de esta versión del skill — algunos requisitos de implementación
-pueden refinarse cuando se publique. Señalar esta contingencia en el informe si afecta
-a algún bloque auditado.
+- **Ley 21.719** publicada el 13 de diciembre de 2024.
+- **Período de adecuación:** 24 meses para la mayoría de obligaciones (plazo: diciembre 2026).
+- **Reglamento:** en elaboración a la fecha de esta versión — puede refinar requisitos
+  de implementación (umbral de edad para menores, criterios EPD, adecuación de países
+  terceros, mecanismos de certificación). Señalar esta contingencia en el informe cuando afecte a un bloque.
+- **APDP:** en proceso de constitución; el CPLT ejerce sus funciones durante la transición.
+- **Versión de esta skill:** 1.1.0 (2026-06-28). Verificar actualizaciones cuando se
+  publique el reglamento o cuando la APDP emita sus primeras instrucciones.
